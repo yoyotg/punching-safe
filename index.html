@@ -1,0 +1,46 @@
+<html>
+
+<head>
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<h1>安心出拳 QR code generator<h1>
+
+<form>
+<table>
+<tr>
+<td class="toright">
+  Place ID (8 digits):<br>
+  <input type="text" id="placeid" value="" onkeypress="checkenter(event)"><err class='error' id='idalert'></err><br>
+  <br>
+  Place name (CHT):<br>
+  <input type="text" id="placenamecht" value="" onkeypress="checkenter(event)"><br>
+  <br>
+  Place name (ENG):<br>
+  <input type="text" id="placenameeng" value="" onkeypress="checkenter(event)"><br>
+  <br>
+  Type:<br>
+  <input type="text" id="type" value="" onkeypress="checkenter(event)"><br>
+  <br>
+  <input type="button" class="button" onclick="generate()" value="GENERATE CODE">
+  </td>
+  <td class="qrcode">
+  <p id="placeiddd"></p>
+  <p id="hashhh"></p>
+  <p id="template"></p>
+  <p id="result"></p>
+  <canvas id="qrcode" class="qrcode"></canvas>
+  </td>
+  </tr>
+</table>
+</form>
+
+
+</body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrious/4.0.2/qrious.min.js"></script>
+<script src="qrscript.js"></script>
+
+</html>
